@@ -1,3 +1,4 @@
+/* RESET */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -5,65 +6,35 @@ body {
   color: white;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px); /* 👈 efeito moderno */
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 10;
   box-sizing: border-box;
 }
 
+/* LOGO */
 .logo {
-  height: 80px;
-  border-radius: 12px;
+  height: 70px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .logo:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px white;
 }
 
-/* HERO */
-.hero {
-  height: 60vh;
-  background: url('imagens/5BF37DDF-C848-448D-B39B-28F0ACE01758.JPG.jpeg') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), #0a0a0a);
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  max-width: 700px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.hero p {
-  color: #ccc;
-  margin: 20px 0;
-}
-
-/* BOTÕES */
+/* BOTÃO */
 .btn {
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   color: white;
@@ -74,38 +45,52 @@ body {
 .btn:hover {
   background: #111;
   transform: scale(1.05);
-  box-shadow: 0 0 15px whitesmoke;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
+/* BOTÃO DESTAQUE */
 .destaque {
   background: linear-gradient(45deg, #0d6efd, #ff2d2d);
   border: none;
 }
 
-/* SEÇÕES */
+/* ================= SEÇÕES ================= */
 section {
-  padding: 80px 20px;
+  padding: 100px 20px 60px; /* 👈 espaço pro header fixo */
   text-align: center;
 }
 
-/* SERVIÇOS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+/* ================= SERVIÇOS ================= */
+.servicos h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CARDS */
 .card {
+  justify-content: left;
   background: #111;
   padding: 25px;
   border-radius: 12px;
   border: 1px solid #222;
   transition: 0.3s;
+  color: #ddd;
 }
 
+/* HOVER */
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: #0d6efd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* GRID */
