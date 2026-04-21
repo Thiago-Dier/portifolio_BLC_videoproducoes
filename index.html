@@ -47,76 +47,72 @@
   <div class="videos">
 
     <!-- VIDEO 1 -->
-    <div class="video-container" onclick="playVideo(this)">
-      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163648.png">
-        <source src="videos/VIDEO SUMMIT SICREDI.mp4" type="video/mp4">
-      </video>
-      <div class="play-button">▶</div>
-
+    <div class="video-item">
+      <div class="video-container" onclick="loadVideo(this, 'FVLn8q3wijA')">
+        <img src="thumbs/Screenshot 2026-04-21 163648.png" class="thumb">
+        <div class="play-button">▶</div>
+      </div>
       <p class="video-title">Summit Sicredi - Foz do Iguaçu/PR</p>
     </div>
 
     <!-- VIDEO 2 -->
-    <div class="video-container" onclick="playVideo(this)">
-      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163334.png">
-        <source src="videos/BLC - BACKSTAGE - SICREDI.mp4" type="video/mp4">
-      </video>
-      <div class="play-button">▶</div>
-
-      <p class="video-title">Backstage Summit Sicredi - Foz do Iguaçu/PR</p>
+    <div class="video-item">
+      <div class="video-container" onclick="loadVideo(this, 'W25dkBmwncY')">
+        <img src="thumbs/Screenshot 2026-04-21 163334.png" class="thumb">
+        <div class="play-button">▶</div>
+      </div>
+      <p class="video-title">Backstage Summit Sicredi</p>
     </div>
 
     <!-- VIDEO 3 -->
-    <div class="video-container" onclick="playVideo(this)">
-      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163549.png">
-        <source src="videos/VIDEO MEDLEY 2026.mp4" type="video/mp4">
-      </video>
-      <div class="play-button">▶</div>
-
+    <div class="video-item">
+      <div class="video-container" onclick="loadVideo(this, '1e_OYYXHp90')">
+        <img src="thumbs/Screenshot 2026-04-21 163549.png" class="thumb">
+        <div class="play-button">▶</div>
+      </div>
       <p class="video-title">Medley - Touros/RN</p>
     </div>
 
     <!-- VIDEO 4 -->
-    <div class="video-container" onclick="playVideo(this)">
-      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163936.png">
-        <source src="videos/VIDEO YARA 2025.mp4" type="video/mp4">
-      </video>
-      <div class="play-button">▶</div>
-
+    <div class="video-item">
+      <div class="video-container" onclick="loadVideo(this, 'MvkuSGv_ypk')">
+        <img src="thumbs/Screenshot 2026-04-21 163936.png" class="thumb">
+        <div class="play-button">▶</div>
+      </div>
       <p class="video-title">Yara - Foz do Iguaçu/PR</p>
     </div>
 
     <!-- VIDEO 5 -->
-    <div class="video-container" onclick="playVideo(this)">
-      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 164240.png">
-        <source src="videos/CALTECH 2025.mp4" type="video/mp4">
-      </video>
-      <div class="play-button">▶</div>
-
+    <div class="video-item">
+      <div class="video-container" onclick="loadVideo(this, 'lgJP6n6c-Sw')">
+        <img src="thumbs/Screenshot 2026-04-21 164240.png" class="thumb">
+        <div class="play-button">▶</div>
+      </div>
       <p class="video-title">Caltech - Paraguai</p>
     </div>
 
     <!-- VIDEO 6 -->
-    <div class="video-container" onclick="playVideo(this)">
-      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 164524.png">
-        <source src="videos/VIDEO SANOFI - SBTMO - 2025.mp4" type="video/mp4">
-      </video>
-      <div class="play-button">▶</div>
-
-      <p class="video-title">Sanofi e Sbtmo - Brasília/DF</p>
+    <div class="video-item">
+      <div class="video-container" onclick="loadVideo(this, '0iWIL8zLzzU')">
+        <img src="thumbs/Screenshot 2026-04-21 164524.png" class="thumb">
+        <div class="play-button">▶</div>
+      </div>
+      <p class="video-title">Sanofi e SBTMO - Brasília/DF</p>
     </div>
 
   </div>
 </section>
 
 <script>
-function playVideo(container) {
-  const video = container.querySelector("video");
-
-  video.play();
-  video.setAttribute("controls", "true");
-
-  container.querySelector(".play-button").style.display = "none";
+function loadVideo(container, videoId) {
+  container.innerHTML = `
+    <iframe 
+      src="https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  `;
 }
 </script>
 
