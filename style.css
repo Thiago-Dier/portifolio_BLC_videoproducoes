@@ -1,7 +1,8 @@
 /* RESET */
-html, body {
+html{
   height: 100%;
-  margin: 0;
+  background: url('imagens/5BF37DDF-C848-448D-B39B-28F0ACE01758.JPG.jpeg')center/cover no-repeat;
+  background-color: #000;
 }
 
 body {
@@ -11,9 +12,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
-  background-attachment: scroll;
-
-  background: url('imagens/5BF37DDF-C848-448D-B39B-28F0ACE01758.JPG.jpeg')center/cover no-repeat;
+  background: transparent;
 }
 
 body::before {
@@ -22,6 +21,10 @@ body::before {
   inset: 0;
   background: rgba(0,0,0,0.6);
   z-index: -1;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* ================= HEADER ================= */
@@ -198,6 +201,7 @@ section {
 
 /* FOOTER */
 footer {
+  flex-shrink: 0;
   text-align: center;
   padding: 20px;
   background: #000;
