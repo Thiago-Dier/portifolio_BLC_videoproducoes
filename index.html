@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="imagens/Logo BLC PNG.png">
+
+  <title>BLC Vídeo Produções</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <img src="imagens/Logo BLC PNG.png" class="logo">
+
+  <a href="https://wa.me/+5545988051691" class="btn">WhatsApp</a>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Produção de Vídeo Profissional</h1>
+    <p>Eventos, filmes institucionais e cobertura completa com qualidade cinematográfica</p>
+
+    <a href="https://wa.me/+5545988051691" class="btn destaque">
+      Solicitar Orçamento
+    </a>
+  </div>
+</section>
+
+<section class="servicos">
+  <h2>O que fazemos</h2>
+
+  <div class="grid">
+    <div class="card">🎥 Filmagem de eventos <br>Live Streaming/Transmissão Simultânea</div>
+    <div class="card">🎬 Produção de conteúdo em Real Time</div>
+    <div class="card">⚡ Edição simultânea e Pós</div>
+    <div class="card">📦 Locação de equipamentos Broadcast</div>
+  </div>
+</section>
+
+<section class="portfolio">
+  <h2>Portfólio</h2>
+
+  <div class="videos">
+
+    <!-- VIDEO 1 -->
+    <div class="video-container" onclick="playVideo(this)">
+      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163648.png">
+        <source src="videos/VIDEO SUMMIT SICREDI.mp4" type="video/mp4">
+      </video>
+      <div class="play-button">▶</div>
+
+      <p class="video-title">Summit Sicredi - Foz do Iguaçu/PR</p>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-container" onclick="playVideo(this)">
+      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163334.png">
+        <source src="videos/BLC - BACKSTAGE - SICREDI.mp4" type="video/mp4">
+      </video>
+      <div class="play-button">▶</div>
+
+      <p class="video-title">Backstage Summit Sicredi - Foz do Iguaçu/PR</p>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-container" onclick="playVideo(this)">
+      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163549.png">
+        <source src="videos/VIDEO MEDLEY 2026.mp4" type="video/mp4">
+      </video>
+      <div class="play-button">▶</div>
+
+      <p class="video-title">Medley - Touros/RN</p>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="video-container" onclick="playVideo(this)">
+      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 163936.png">
+        <source src="videos/VIDEO YARA 2025.mp4" type="video/mp4">
+      </video>
+      <div class="play-button">▶</div>
+
+      <p class="video-title">Yara - Foz do Iguaçu/PR</p>
+    </div>
+
+    <!-- VIDEO 5 -->
+    <div class="video-container" onclick="playVideo(this)">
+      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 164240.png">
+        <source src="videos/CALTECH 2025.mp4" type="video/mp4">
+      </video>
+      <div class="play-button">▶</div>
+
+      <p class="video-title">Caltech - Paraguai</p>
+    </div>
+
+    <!-- VIDEO 6 -->
+    <div class="video-container" onclick="playVideo(this)">
+      <video controlsList="nodownload" poster="thumbs/Screenshot 2026-04-21 164524.png">
+        <source src="videos/VIDEO SANOFI - SBTMO - 2025.mp4" type="video/mp4">
+      </video>
+      <div class="play-button">▶</div>
+
+      <p class="video-title">Sanofi e Sbtmo - Brasília/DF</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function playVideo(container) {
+  const video = container.querySelector("video");
+
+  video.play();
+  video.setAttribute("controls", "true");
+
+  container.querySelector(".play-button").style.display = "none";
+}
+</script>
+
+<section class="cta">
+  <h2>Seu evento merece um vídeo profissional</h2>
+  <a href="https://wa.me/+5545988051691" class="btn destaque">Falar no WhatsApp</a>
+</section>
+
+<footer>
+  <p>© BLC Vídeo Produções</p>
+</footer>
+
+</body>
+</html>
