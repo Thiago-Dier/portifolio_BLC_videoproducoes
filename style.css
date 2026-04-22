@@ -99,12 +99,13 @@ section {
 /* CARDS */
 .card {
   justify-content: left;
-  background: #111;
+  background: #bdb6a4;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 25px;
   border-radius: 12px;
   border: 1px solid #222;
   transition: 0.3s;
-  color: #ddd;
+  color: white;
 }
 
 /* HOVER */
